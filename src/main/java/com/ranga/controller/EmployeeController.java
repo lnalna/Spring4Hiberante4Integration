@@ -87,7 +87,10 @@ public class EmployeeController {
         pagedListHolder.setPageSize(5);
         modelAndView.addObject("maxPages", pagedListHolder.getPageCount());
 
-        if(page==null || page < 1 || page > pagedListHolder.getPageCount())page=1;
+        if(page==null || page < 1 || page > pagedListHolder.getPageCount()) {
+            page = 1;
+        }
+
         modelAndView.addObject("page", page);
 
         if(page == null || page < 1 || page > pagedListHolder.getPageCount()){
@@ -108,9 +111,9 @@ public class EmployeeController {
         ModelAndView modelAndView = new ModelAndView("employeeListSearch");
 
 
-            PagedListHolder<Employee> pagedListHolderSearch = new PagedListHolder(employeeService.getAllEmployees(searchName));
-            pagedListHolderSearch.setPageSize(5);
-            modelAndView.addObject("maxPages", pagedListHolderSearch.getPageCount());
+        PagedListHolder<Employee> pagedListHolderSearch = new PagedListHolder(employeeService.getAllEmployees(searchName));
+        pagedListHolderSearch.setPageSize(5);
+        modelAndView.addObject("maxPages", pagedListHolderSearch.getPageCount());
 
 
         if(page==null || page < 1 || page > pagedListHolderSearch.getPageCount())page=1;
