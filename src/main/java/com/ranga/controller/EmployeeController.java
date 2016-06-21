@@ -116,7 +116,9 @@ public class EmployeeController {
         modelAndView.addObject("maxPages", pagedListHolderSearch.getPageCount());
 
 
-        if(page==null || page < 1 || page > pagedListHolderSearch.getPageCount())page=1;
+        if(page==null || page < 1 || page > pagedListHolderSearch.getPageCount()) {
+            page = 1;
+        }
         modelAndView.addObject("page", page);
 
         if(page == null || page < 1 || page > pagedListHolderSearch.getPageCount()){
