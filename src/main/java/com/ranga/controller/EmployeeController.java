@@ -16,12 +16,8 @@ import org.springframework.web.servlet.ModelAndView;
 
 import org.springframework.beans.support.PagedListHolder;
 
-import javax.servlet.http.HttpServletRequest;
 
-/**
- * @author Ranga Reddy
- * @version 1.0
- */
+
 @Controller
 public class EmployeeController {
 	
