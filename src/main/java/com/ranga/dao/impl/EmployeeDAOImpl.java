@@ -1,6 +1,3 @@
-/**
- * 
- */
 package com.ranga.dao.impl;
 
 import com.ranga.dao.EmployeeDAO;
@@ -14,10 +11,7 @@ import java.math.BigInteger;
 import java.util.ArrayList;
 import java.util.List;
 
-/**
- * @author Ranga Reddy
- * @version 1.0
- */
+
 
 @Repository
 public class EmployeeDAOImpl implements EmployeeDAO {
@@ -75,6 +69,7 @@ public class EmployeeDAOImpl implements EmployeeDAO {
 			employees.add(employee);
 		}
 		System.out.println(employees);
+
 		return employees;
 	}
 }
